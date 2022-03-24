@@ -6,3 +6,7 @@
 
 ![实模式的1MB空间](./Fig/%E5%AE%9E%E6%A8%A1%E5%BC%8F1MB%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80.png)
 
+从图中我们可以看出，MBR被加载到了`0x7c00`的位置，那么我们在加载MBR的时候，就需要把MBR的加载程序放到`0x7c00`的位置上。
+```x86asm
+SECTION MBR vstart=0x7c00
+``` 
